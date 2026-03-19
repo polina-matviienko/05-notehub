@@ -25,12 +25,8 @@ export default function NoteList({ notes }: NoteListProps) {
           <p className={css.content}>{content}</p>
           <div className={css.footer}>
             <span className={css.tag}>{tag}</span>
-            <button
-              className={css.button}
-              onClick={() => mutation.mutate(id)}
-              disabled={mutation.isPending}
-            >
-              {mutation.isPending ? "..." : "Delete"}
+            <button className={css.button} onClick={() => mutation.mutate(id)}>
+              Delete
             </button>
           </div>
         </li>
